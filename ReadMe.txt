@@ -1,4 +1,4 @@
-Our project is in three parts .
+This project in these parts .
 1 . Android app
 2 . WebApplication
 3 . Blockchain
