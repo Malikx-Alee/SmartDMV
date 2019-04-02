@@ -1,0 +1,23 @@
+<a href="#/banks">Go Back</a>
+<div class="panel panel-default" ng-init="getBank()">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-group">
+          <li class="list-group-item">Slipnumber: {{bank.slipnumber}}</li>
+          <li class="list-group-item">Personname: {{bank.personname}}</li>
+          <li class="list-group-item">Address: {{bank.address}}</li>
+          <li class="list-group-item">Cnic: {{bank.cnic}}</li>
+          <li class="list-group-item">Feestatus: {{bank.feestatus}}</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pull-right">
+  <a href="#/banks/edit/{{bank._id}}">Edit</a> |  <a href="#" ng-click="removeBank(bank._id)">Delete</a>
+  </div>
+
+ 

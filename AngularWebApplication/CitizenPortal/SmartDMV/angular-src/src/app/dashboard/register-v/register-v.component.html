@@ -1,0 +1,77 @@
+ 
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" >
+  
+    <!-- Header -->
+    <header class="w3-container" style="padding-top:22px">
+      <h5><b><i class="fas fa-car"></i> Register Vehicle</b></h5>
+    </header>
+  
+    <br>
+    <br>
+  
+    <div class="w3-panel">
+      <div class="w3-container" >
+        <br>
+        <table>
+          <tr>
+            <td><label>Registeration Voucher Number</label></td>
+            <td style="padding-left:50px"><input type="text" placeholder="123456789" #voucherNumber></td>
+          </tr>
+          <br>
+          <tr>
+            <td>
+              <p>Submit Rs-500 in below mentioned Bank Account Number.</p>
+              <br>
+              <p>Account Number:   0001277901547301</p>
+            </td>
+          </tr>
+          <br>
+          <tr>
+            <td><label>Bank Deposit Slip Number</label></td>
+            <td style="padding-left:50px"><input type="text" placeholder="123456789" #slipNumber></td>
+          </tr>
+          <br>
+          <tr>
+            <td>
+              <button class="button button1" (click)="registerR(voucherNumber.value, slipNumber.value)">REQUEST</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+   
+  
+  
+    <!-- End page content -->
+  </div>
+  
+  <script>
+  // Get the Sidebar
+  var mySidebar = document.getElementById("mySidebar");
+  
+  // Get the DIV with overlay effect
+  var overlayBg = document.getElementById("myOverlay");
+  
+  // Toggle between showing and hiding the sidebar, and add overlay effect
+  function w3_open() {
+      if (mySidebar.style.display === 'block') {
+          mySidebar.style.display = 'none';
+          overlayBg.style.display = "none";
+      } else {
+          mySidebar.style.display = 'block';
+          overlayBg.style.display = "block";
+      }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+  }
+  </script>
+

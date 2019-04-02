@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">SmartDMV</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="overview">Overview</string>
+    <string name="register_vehicle">Register Vehicle</string>
+    <string name="transfer_vehicle">Transfer Vehicle</string>
+    <string name="block_vehicle">Block Vehicle</string>
+    <string name="submit_token_tax">Submit Token Tax</string>
+    <string name="change_engine_no">Change Engine No.</string>
+    <string name="history">History</string>
+    <string name="settings">Settings</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="number_of_vehicle_n_registered_on_your_name">Number of Vehicle  Registered on your Name</string>
+    <string name="number_of_vehicles">0</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="registration_voucher_number">Registration Voucher Number</string>
+    <string name="bank_deposit_slip_number">Bank Deposit Slip Number</string>
+    <string name="registration_note">Submit Rs-500 in below mentioned Bank Account Number. Account Number: 0001277901547301</string>
+    <string name="login_via_nadra">LOGIN via NADRA</string>
+    <string name="smart_dmv">SMART DMV</string>
+</resources>

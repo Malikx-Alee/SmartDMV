@@ -1,0 +1,52 @@
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+  .button1 {border-radius: 8px;}
+
+.button1:hover{
+    background: rgba(45,223,128,1);
+    color: #FFFFFF
+  }
+  .regfulldev{
+    width: 88%;
+    height: auto;
+    margin: auto;
+    
+  }
+  .regleftdev{
+    width: 40%;
+    height: 100px;
+    float: left;
+  }
+  .regrightdev{
+    width: 40%;
+    height: 100px;
+    float: right;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+  }
+  
+  th {
+    text-align: left;
+    padding: 1px;
+    height: 50px;
+    font-size: 18px;
+  }
+  td {
+    text-align: left;
+    padding: 1px;
+    height: 50px;
+  }
+  
+  tr:nth-child(even) {background-color: #ffffff;}
+  tr:nth-child(odd){background-color: #ffffff;}

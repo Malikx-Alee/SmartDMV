@@ -1,0 +1,33 @@
+<span class="w3-bar-item w3-left" style="padding-left:5%">
+  <img src="assets/img/f.png" width="110" height="95" style="padding-top:2%">
+</span>
+<br>
+<span class="w3-bar-item w3-left" style="padding-left:3%">
+  <strong>Government of Punjab</strong>
+</span>
+<br>
+<span class="w3-bar-item w3-left" style="padding-left:5.5%">
+  <strong>Smart DMV</strong>
+</span>
+
+
+<div class="login-page" style="margin-top:-2%">
+  <div class="form">
+    <div class="container" style="margin-left:-25%">
+      <h4 style="color:#004614"><strong>Excise Officers Login</strong></h4>
+    </div>
+    <br>
+    <form (submit)="loginUser($event)" class="login-form">
+      <input type="text" placeholder="username"/>
+      <input type="password" placeholder="password"/>
+      <a [routerLink]="['/dashboard']"> <button class="button"> LOGIN </button></a>
+      
+      
+      <p class="message">Not registered? <a href="#">Create an account</a><br></p>
+    </form>
+  </div>
+</div>
+
+
+
+

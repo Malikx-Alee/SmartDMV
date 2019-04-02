@@ -1,0 +1,46 @@
+  
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" >
+  
+    <!-- Header -->
+    <header class="w3-container" style="padding-top:22px">
+      <h5><b><i class="fas fa-exchange-alt fa-fw"></i> Transfer Vehicle</b></h5>
+    </header>
+  
+    <br>
+    <br>
+  
+    <div class="regfulldev">
+
+      <table>
+        <tr>
+          <th>Vehicle Number Plate</th>
+          <th>View Request</th>
+          <h3>{{errorMsg}}</h3>
+        </tr>
+          <tr *ngFor="let data of dataRecieve">
+
+            <!--<ng-container *ngIf = "data.check === 'PENDING'">
+              
+              <td>{{data.regID}}</td>
+              <td>{{data.check}}</td>
+              <td><button class="button button1" (click)="requestTable(data.regID)"><strong>View</strong></button></td> 
+            
+            </ng-container>
+            -->
+            <td>{{data.numberPlate}}</td>
+              
+              <td><button class="button button1" (click)="reviewVehicleNumber(data.numberPlate)"><strong>View</strong></button></td>
+        </tr>
+         
+      </table>
+  
+      
+  </div>
+    
+  
+  
+  
+    <!-- End page content -->
+  </div>
+  

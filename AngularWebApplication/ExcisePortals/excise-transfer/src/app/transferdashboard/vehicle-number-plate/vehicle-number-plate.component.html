@@ -1,0 +1,129 @@
+<div class="w3-main" >
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px; display: inline;">
+    <h5><b><i class="fas fa-car"></i> Vehicle Number Plate : <span style="margin-left:10px;">{{dataReceive}}</span></b></h5>
+  </header>
+
+  <br>
+  <br>
+
+<div class="regfulldev">
+        <table >
+                
+                <tr>
+                  <th>Old Owner</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>Name</td>
+                  <td>{{_owner?.name}}</td>
+                  
+                </tr>
+                <tr>
+                        <td>Contact No</td>
+                        <td>{{_owner?.phone}}</td>
+                        
+                </tr>
+                <tr>
+                        <td>Address</td>
+                        <td>{{_owner?.address}}</td>
+                        
+                </tr>
+                <tr>
+                        <td>Cnic</td>
+                        <td>{{_owner?.cnic}}</td>
+                        
+                </tr>
+                
+                
+              </table>
+              <input type="checkbox" ><label style="margin-top:30px;">Verified Through Call</label>
+              
+              <table>
+                
+                    <tr>
+                      <th>New Owner</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>Name</td>
+                      <td>{{_newOwner?.name}}</td>
+                      
+                    </tr>
+                    <tr>
+                            <td>Contact No</td>
+                            <td>{{_newOwner?.phone}}</td>
+                            
+                    </tr>
+                    <tr>
+                            <td>Address</td>
+                            <td>{{_newOwner?.address}}</td>
+                            
+                    </tr>
+                    <tr>
+                            <td>Cnic</td>
+                            <td>{{_newOwner?.cnic}}</td>
+                            
+                    </tr>
+                    
+                    
+                  </table>
+                  
+                  <input type="checkbox" ><label style="margin-top:30px;">Verified Through Call</label>
+    
+                  <table style="margin-top:30px;">
+                        <tr>
+                                <td><button class = "button button1" (click)="back()"><strong>Back</strong></button></td>
+                                <td><button class="button button1"(click)="approve()"> <strong>Approve</strong></button></td>
+                                
+                                
+                        </tr>
+                  </table>
+   
+</div>
+  <!--<div class="w3-panel">
+    <div class="w3-container" >
+      <br>
+      <table>
+        <tr>
+          <td><label>Registeration Voucher Number</label></td>
+          <td style="padding-left:50px"><input type="text"></td>
+        </tr>
+        <tr>
+          <td><br></td>
+          <td><br></td>
+        </tr>
+        <tr>
+          <td>
+            <text>Submit Rs-500 in below mentioned Bank Account Number.</text>
+            <br>
+            <text>Account Number:   0001277901547301</text>
+          </td>
+        </tr>
+        <tr>
+          <td><br></td>
+          <td><br></td>
+        </tr>
+        <tr>
+          <td><label>Bank Deposit Slip Number</label></td>
+          <td style="padding-left:50px"><input type="text"></td>
+        </tr>
+        <tr>
+          <td><br></td>
+          <td><br></td>
+        </tr>
+        <tr>
+          <td>
+            <button type="submit" class="comment_button"><strong>REQUEST</strong></button>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>-->
+
+
+
+  <!-- End page content -->
+</div>

@@ -1,0 +1,18 @@
+<div class="panel panel-default" ng-init="getBanks()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Latest Entries</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+    	<div ng-repeat="bank in banks">
+    		<div class="col-md-6">
+    				<label>Person Name</label><h4>{{bank.personname}}</h4>
+    				<label>Slip Number</label><h4>{{bank.slipnumber}}</h4>
+    				<label>Cnic</label><h4>{{bank.cnic}}</h4>
+    				<label>Address</label><h4>{{bank.address}}</h4>
+    				<label>Fee Status</label><h4>{{bank.feestatus}}</h4>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,130 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * Sample business network definition.
+ */
+namespace org.smart.dmv
+
+enum Status {
+  o APPROVED
+  o PENDING
+  o REJECT
+}
+
+enum BlockStatus{
+  o BLOCKED
+  o UNBLOCKED
+}
+
+enum TokenTaxStatus {
+  o SUBMITTED
+  o NOTSUBMITTED
+}
+
+concept TransferCheck {
+  --> Owner newOwner optional
+  o Status ownerPermission optional
+  o Status excisePermission optional
+  o Status newOwnerPermission optional
+}
+
+
+asset Vehicle identified by numberPlate {
+  //o String assetId
+  o String numberPlate
+  o String makersName 
+  o String model 
+  o String engineNumber 
+  o String chassisNumber 
+  o String assetCreationDate
+  o String assetExpirationDate 
+  o String purchaseDate 
+  o String yearOfManufacture 
+  o String color 
+  o String typeOfBody
+  o String seatingCapacity  
+  o String horsePower 
+  o String tokenTaxAmount
+  o TokenTaxStatus tokenTax
+  o BlockStatus blockVehicle
+  o TransferCheck transferCheck optional
+  --> Owner owner optional
+}
+
+asset VehicleRegistration identified by regID {
+  o String regID
+  o Status check
+}
+
+
+transaction RegisterVehicleTransaction {
+  --> VehicleRegistration reg
+  o Status check
+}
+
+abstract participant Account identified by cnic {
+  //o String accountID
+  o String cnic 
+  o String name 
+  o String age optional
+  o String address optional
+  o String phone optional
+  o String gender optional
+  o String DOB optional
+  o String FatherOrHusbandName optional
+} 
+
+participant Owner extends Account {
+}
+
+participant Excise extends Account {
+}
+
+transaction TransferOwnershipTransaction {
+  --> Vehicle asset
+  --> Owner newOwner
+ // --> Excise exciseOfficer
+}
+
+transaction TransferOwnershipExciseTransaction {
+  --> Vehicle asset
+  o Status check
+ // --> Excise exciseOfficer
+}
+
+transaction TransferOwnershipNewOwnerTransaction {
+  --> Vehicle asset
+  o Status check
+ // --> Excise exciseOfficer
+}
+
+transaction BlockVehicleTransaction {
+  //--> Owner owner
+  --> Vehicle asset
+  //o String firNumber
+}
+
+transaction SubmitTokenTaxTransaction {
+  //--> Owner owner
+  --> Vehicle asset
+  //o String depositSlipNo
+}
+
+
+transaction ChangeEngineNumberTransaction {
+  --> Vehicle asset
+  //--> Excise exciseOfficer
+  o String newEngineNumber
+}

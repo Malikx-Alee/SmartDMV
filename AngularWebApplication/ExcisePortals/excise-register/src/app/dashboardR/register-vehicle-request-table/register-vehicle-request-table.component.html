@@ -1,0 +1,104 @@
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" >
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px; display: inline;">
+    <h5><b><i class="fas fa-car"></i> Registeration Request Number : <span style="margin-left:10px;">{{dataReceive}}</span></b></h5>
+  </header>
+
+  <br>
+  <br>
+
+<div class="regfulldev">
+    <table>
+        
+          <th>Enter Vehicle Details</th>
+          <th></th>
+          <h3>{{errorMsg}}</h3>
+
+          <tr>
+            <td>Number Plate</td>
+            <td><input type="text" #numberPlate></td>     
+          </tr>
+          <tr>
+            <td>Makers Name</td>
+            <td><input type="text" #makersName></td>     
+          </tr>
+        <tr>
+          <td>Model</td>
+          <td><input type="text" #model></td>     
+        </tr>
+        <tr>
+          <td>Engine Number</td>
+          <td><input type="text" #engineNumber></td>          
+        </tr>
+        <tr>
+          <td>Chasis Number</td>
+          <td><input type="text" #chasisNumber></td>     
+        </tr>
+        <tr>
+          <td>Asset Creation Date</td>
+          <td><input type="date" #assetCDate></td>          
+        </tr>
+        <tr>
+          <td>Asset Expiration Date</td>
+          <td><input type="date" #assetEDate></td>          
+        </tr>
+        <tr>
+          <td>Purchase Date</td>
+          <td><input type="date" #purchaseDate></td>          
+        </tr>
+        <tr>
+          <td>Year of Manufacture</td>
+          <td><input type="text" #yearManufacture></td>         
+        </tr>
+        <tr>
+          <td>Color</td>
+          <td><input type="text" #color></td>          
+        </tr>
+        <tr>
+          <td>Type of Body</td>
+          <td><input type="text" #typeBody></td>          
+        </tr>
+        <tr>
+          <td>Seating Capacity</td>
+          <td><input type="text" #seatingCapacity></td>          
+        </tr>
+        <tr>
+          <td>Horse Power</td>
+          <td><input type="text" #horsePower></td>          
+        </tr>
+        <tr>
+          <td>Token Tax Amount</td>
+          <td><input type="text" #tokenTaxA></td>          
+        </tr>
+        <tr>
+          <td>Owner</td>
+          <td><input type="text" #owner></td>          
+        </tr>
+        
+    </table>
+    
+	<input type="checkbox" checked="checked"><label style="margin-top:30px;">Verified Through Call </label>
+                    
+                  
+    <table style="margin-top:30px;">
+        
+		  <td><button class="button button1" (click) = "back()"><strong>BACK</strong></button></td>
+          <td><button class="button button1" 
+            (click) = "registerT(numberPlate.value, makersName.value, model.value, 
+            engineNumber.value, chasisNumber.value, assetCDate.value, assetEDate.value,
+            purchaseDate.value, yearManufacture.value, color.value, typeBody.value,
+            seatingCapacity.value, horsePower.value, tokenTaxA.value, owner.value)">
+            <strong>Approve</strong>
+            </button>
+        </td>
+                            
+        
+    </table>
+   
+</div>
+
+
+  <!-- End page content -->
+</div>

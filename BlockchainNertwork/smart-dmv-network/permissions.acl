@@ -1,0 +1,142 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * Sample access control list.
+ */
+
+
+rule ExciseCanRegisterVehicle {
+    description: "Allow all owner to submit transactions"
+    participant: "org.smart.dmv.Excise"
+    operation: CREATE, READ, UPDATE
+    resource: "org.smart.dmv.RegisterVehicleTransaction"
+    action: ALLOW
+}
+
+rule OwnerCanRegisterVehicle {
+    description: "Allow all owner to submit transactions"
+    participant: "org.smart.dmv.Owner"
+    operation: CREATE , READ , UPDATE
+    resource: "org.smart.dmv.RegisterVehicleTransaction"
+    action: ALLOW
+}
+
+
+rule ExciseCanCreateVehicleRegistrationAssets {
+    description: "Allow Excise to create assets"
+    participant: "org.smart.dmv.Excise"
+    operation: CREATE , READ , UPDATE
+    resource: "org.smart.dmv.VehicleRegistration"
+    action: ALLOW
+}
+
+rule OwnerHasFullAccessToTheirVehicleRegistrationAssets {
+    description: "Allow all Owners full access to their assets"
+    participant: "org.smart.dmv.Owner"
+    operation: CREATE , READ , UPDATE
+    resource: "org.smart.dmv.VehicleRegistration"
+    action: ALLOW
+}
+
+rule ExciseCanCreateVehicleAssets {
+    description: "Allow Excise to create assets"
+    participant: "org.smart.dmv.Excise"
+    operation: CREATE , READ , UPDATE
+    resource: "org.smart.dmv.Vehicle"
+    action: ALLOW
+}
+
+rule OwnerHasFullAccessToTheirAssets {
+    description: "Allow all Owners full access to their assets"
+    participant: "org.smart.dmv.Owner"
+    operation: CREATE , READ , UPDATE
+    resource: "org.smart.dmv.Vehicle"
+    action: ALLOW
+}
+
+rule OwnerCanBlockVehicle {
+    description: "Allow all owner to submit transactions"
+    participant: "org.smart.dmv.Owner"
+    operation: CREATE
+    resource: "org.smart.dmv.BlockVehicleTransaction"
+    action: ALLOW
+}
+
+rule OwnerCanSubmitTokenTax {
+    description: "Allow all owner to submit transactions"
+    participant: "org.smart.dmv.Owner"
+    operation: CREATE
+    resource: "org.smart.dmv.SubmitTokenTaxTransaction"
+    action: ALLOW
+}
+
+rule NewOwnerCanApproveTransferVehicle {
+    description: "Allow all owner to submit transactions"
+    participant: "org.smart.dmv.Owner"
+    operation: CREATE
+    resource: "org.smart.dmv.TransferOwnershipNewOwnerTransaction"
+    action: ALLOW
+}
+
+rule ExciseCanApproveTransferVehicle {
+    description: "Allow all owner to submit transactions"
+    participant: "org.smart.dmv.Excise"
+    operation: CREATE
+    resource: "org.smart.dmv.TransferOwnershipExciseTransaction"
+    action: ALLOW
+}
+
+rule OwnerCanTransferVehicle {
+    description: "Allow all owner to submit transactions"
+    participant: "org.smart.dmv.Owner"
+    operation: CREATE
+    resource: "org.smart.dmv.TransferOwnershipTransaction"
+    action: ALLOW
+}
+
+rule OwnerCanChangeEngineNumber {
+    description: "Allow all owner to submit transactions"
+    participant: "org.smart.dmv.Owner"
+    operation: CREATE
+    resource: "org.smart.dmv.ChangeEngineNumberTransaction"
+    action: ALLOW
+}
+
+
+/////////////////////////////////
+
+rule SystemACL {
+    description: "System ACL to permit all access"
+    participant: "org.hyperledger.composer.system.Participant"
+    operation: ALL
+    resource: "org.hyperledger.composer.system.*"
+    action: ALLOW
+}
+
+rule NetworkAdminUser {
+    description: "Grant business network administrators full access to user resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "**"
+    action: ALLOW
+}
+
+rule NetworkAdminSystem {
+    description: "Grant business network administrators full access to system resources"
+    participant: "org.hyperledger.composer.system.NetworkAdmin"
+    operation: ALL
+    resource: "org.hyperledger.composer.system.**"
+    action: ALLOW
+}

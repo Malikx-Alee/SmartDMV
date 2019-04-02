@@ -1,0 +1,54 @@
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button1 {border-radius: 8px;}
+
+.button1:hover{
+    background: rgba(45,223,128,1);
+    color: #FFFFFF
+  }
+  .regfulldev{
+    width: 88%;
+    height: 520px;
+    margin: auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th {
+    text-align: left;
+    padding: 1px;
+    height: 50px;
+    font-size: 18px;
+  }
+  td {
+    text-align: left;
+    padding: 1px;
+    height: 50px;
+  }
+  
+  tr:nth-child(even) {background-color: #ffffff;}
+
+  a:link, a:visited {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+}
+
+
+a:hover, a:active {
+    background: rgba(45,223,128,1);
+    color: #FFFFFF
+}

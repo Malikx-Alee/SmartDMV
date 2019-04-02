@@ -1,0 +1,21 @@
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+    .button1 {border-radius: 8px;}
+  
+  .button1:hover{
+      background: rgba(45,223,128,1);
+      color: #FFFFFF
+    }
+    .regfulldev{
+        width: 88%;
+        height: 520px;
+        margin: auto;
+      } 

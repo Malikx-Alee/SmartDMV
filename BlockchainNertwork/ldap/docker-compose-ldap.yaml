@@ -1,0 +1,55 @@
+#
+# Copyright . All Rights Reserved.
+#
+
+version: '3.2'
+
+#networks:
+#  dmvNetwork:
+#    external: true
+
+services:
+
+#  ca:
+#    command: sh -c 'fabric-ca-server start -d --ca.name default'
+
+#  api:
+#    environment:
+#      - ENROLL_ID=cn=${ENROLL_ID},${LDAP_BASE_DN}
+
+  ldap-service:
+    container_name: ldap.example.com
+    image: osixia/openldap
+    environment:
+      - LDAP_ORGANISATION=org1
+      - LDAP_DOMAIN=example.com
+      - LDAP_ADMIN_PASSWORD=adminpw
+    ports:
+      - 389:389
+    volumes:
+      - ./data/ldap/database:/var/lib/ldap
+      - ./data/ldap/config:/etc/ldap/slapd.d
+      - ./data/ldap/certs:/container/service/slapd/assets/certs
+#    networks:
+#      - dmvNetwork
+#    network_mode: host
+
+  ldapadmin-service:
+    container_name: ldapadmin.example.com
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=ldap.example.com
+      - PHPLDAPADMIN_HTTPS=false
+#      - PHPLDAPADMIN_HTTPS_CA_CRT_FILENAME=ca.crt
+    image: osixia/phpldapadmin
+    ports:
+      - 6443:443
+      - 6080:80
+#    volumes:
+#      - ./data/ldap/certs:/container/service/phpldapadmin/assets/apache2/certs
+    depends_on:
+      - ldap-service
+#    networks:
+#      - dmvNetwork
+#    network_mode: host
+
+

@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "login": "mojombo",
+        "url": "https://api.github.com/users/mojombo"
+    },
+    {
+        "id": 2,
+        "login": "defunkt",
+        "url": "https://api.github.com/users/defunkt"
+    }
+]

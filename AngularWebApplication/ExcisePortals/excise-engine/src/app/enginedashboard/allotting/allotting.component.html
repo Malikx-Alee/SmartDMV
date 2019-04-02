@@ -1,0 +1,36 @@
+<!-- !PAGE CONTENT! -->
+<div class="w3-main">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px; display: inline;">
+    <h5><b><i class="fas fa-car"></i> Alot Date & Time For Vehicle Inspection</b></h5>
+  </header>
+
+  <br>
+  <br>
+
+  <div id="myDIV" class="regfulldev">
+    <table>
+            <tr>
+              <th>Allotting Date & Time : {{dataRecieve}}</th>
+
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td><input type="date" name="Date" #date></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td><input type="time" name="Time" #time></td>    
+            </tr>
+            
+            
+      </table>
+          <table style="margin-top:30px;">
+                <tr>
+                        <td><button (click)="submitButtonFunction(date.value , time.value)" class="button button1"><strong>Submit</strong></button></td>    
+                </tr>
+          </table>     
+  </div>
+
+</div>

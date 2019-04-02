@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transfer_vehicle"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:textColor="@android:color/black"
+        android:drawableStart="@drawable/baseline_swap_horiz_black_36"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/textView_transfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number Plate of Vehicle"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@id/textView"/>
+
+    <EditText
+        android:id="@+id/editText_transfer_vehicle_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="LED-1006"
+        android:layout_below="@id/textView_transfer"/>
+
+    <TextView
+        android:id="@+id/textView_cnic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CNIC of New Owner"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@id/editText_transfer_vehicle_number"/>
+
+    <EditText
+        android:id="@+id/editText_transfer_cnic_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="3520235058071"
+        android:layout_below="@id/textView_cnic"/>
+
+    <TextView
+        android:id="@+id/noteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_transfer_cnic_number"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/registration_note"/>
+
+    <TextView
+        android:id="@+id/textView_transfer_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bank Deposit Slip Number"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@id/noteTextView"/>
+
+    <EditText
+        android:id="@+id/editText_transfer_bank_deposit_slip_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="123456789"
+        android:layout_below="@id/textView_transfer_bank"/>
+
+    <Button
+        android:id="@+id/requestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editText_transfer_bank_deposit_slip_number"
+        android:layout_marginTop="15dp"
+        android:text="REQUEST"
+        android:background="@color/background_color" />
+
+</RelativeLayout>

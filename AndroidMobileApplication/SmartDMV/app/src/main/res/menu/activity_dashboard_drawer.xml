@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+
+            android:id="@+id/nav_overview"
+            android:icon="@drawable/baseline_remove_red_eye_black_48"
+            android:title="@string/overview" />
+        <item
+            android:id="@+id/nav_register_vehicle"
+            android:icon="@drawable/baseline_directions_car_black_48"
+            android:title="@string/register_vehicle" />
+        <item
+            android:id="@+id/nav_transfer_vehicle"
+            android:icon="@drawable/baseline_swap_horiz_black_48"
+            android:title="@string/transfer_vehicle" />
+        <item
+            android:id="@+id/nav_block_vehicle"
+            android:icon="@drawable/baseline_block_black_48"
+            android:title="@string/block_vehicle" />
+        <item
+            android:id="@+id/nav_submit_token_tax"
+            android:icon="@drawable/baseline_account_balance_black_48"
+            android:title="@string/submit_token_tax" />
+        <item
+            android:id="@+id/nav_change_engine_no"
+            android:icon="@drawable/baseline_build_black_48"
+            android:title="@string/change_engine_no" />
+    </group>
+
+    <!--
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/nav_history"
+                android:icon="@drawable/baseline_history_black_48"
+                android:title="@string/history" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/baseline_settings_black_48"
+                android:title="@string/settings" />
+        </menu>
+    </item>-->
+
+</menu>

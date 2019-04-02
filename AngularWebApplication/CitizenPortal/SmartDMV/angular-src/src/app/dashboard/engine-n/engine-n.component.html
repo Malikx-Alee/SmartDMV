@@ -1,0 +1,101 @@
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fas fa-exchange-alt"></i> Change Engine Number</b></h5>
+  </header>
+
+  <br>
+  <br>
+
+  <div class="regfulldev">
+    <div class="w3-container" >
+      <br>
+      <table>
+        <tr>
+          <td><label>Number Plate of Vehicle</label></td>
+          <td style="padding-left:50px"><input type="text" placeholder="ABC-123" #noplate></td>
+        </tr>
+        <tr>
+          <td>
+            <p>Submit Rs-500 in below mentioned Bank Account Number.</p>
+            <br>
+            <p>Account Number:   0001277901547302</p>
+          </td>
+        </tr>
+        <tr>
+          <td><label>Bank Deposit Slip Number</label></td>
+          <td style="padding-left:50px"><input type="text" placeholder="123456789" #BankSlipNumber></td>
+        </tr>
+        <br>
+        <tr>
+          <td>
+            <button class="button button1" (click)="changeEngine(noplate.value, BankSlipNumber.value)">REQUEST</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <hr>
+  <header class="w3-container" style="padding-top:5px">
+    <h5><b><i class="fa fa-bell fa-fw"></i> Alotted Date & Time</b></h5>
+  </header>
+  <br>
+  <div class="regfulldev1">
+
+    <table>
+
+        <tr>
+          <th>Number Plate</th>
+          <th>Date</th>
+          <th>Time</th>
+          <!--<h3>{{errorMsg}}</h3>-->
+        </tr>
+        
+        <tr *ngFor="let data of dataRecieve">
+              <td>{{data.numberPlate}}</td>
+              <td>{{data.date1}}</td>
+              <td>{{data.time1}}</td>
+              <td><button class="button button1" (click)="deleteTable(data.numberPlate)"><strong>Delete</strong></button></td>
+        </tr>
+    </table>
+
+    
+  </div>
+  
+
+
+
+  <!-- End page content -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
